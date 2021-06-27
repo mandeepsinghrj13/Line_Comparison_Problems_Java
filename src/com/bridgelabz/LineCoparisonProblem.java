@@ -2,8 +2,7 @@ package com.bridgelabz;
 import java.util.Scanner;
 public class LineCoparisonProblem 
 {
-
-	public static void main(String[] args) 
+	public static void compareLine() 
 	{
 		double x1;
 		double y1;
@@ -36,7 +35,11 @@ public class LineCoparisonProblem
 			String str1 = Double.toString(length1);	
 	    double length2 = Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
 			String str2 = Double.toString(length2);	
-	        System.out.println(str1.equals(str2));
+	        System.out.println(str1.equals(str2));	
+	}
+	public static void main(String[] args) 
+	{
+		compareLine();
 	}
 
 }
