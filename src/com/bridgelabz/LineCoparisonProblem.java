@@ -1,24 +1,42 @@
 package com.bridgelabz;
-
+import java.util.Scanner;
 public class LineCoparisonProblem 
 {
 
 	public static void main(String[] args) 
 	{
-		int x1=1;
-		int y1=1;
-		int x2=5;
-		int y2=5;
-		int x3=3;
-		int y3=3;
-		int x4=10;
-		int y4=10;
-		System.out.println("the cordinates of line 1 are::" +"("+x1+","+y1+")"+"and"+"("+x2+","+y2+")");
-		double Lengthline=Math.sqrt(((x2-x1) * (x2-x1)) + ((y2-y1) * (y2-y1))); 
-		System.out.println("Length of a line::"+Lengthline);
-		System.out.println("the cordinates of line 2 are::"+"("+x3+","+y3+")"+"and"+"("+x4+","+y4+")");
-		double Lengthline1=Math.sqrt(((x4-x3) * (x4-x3)) + ((y4-y3) * (y4-y3)));
-		System.out.println("Length of a line::"+Lengthline1);
+		double x1;
+		double y1;
+		double x2;
+		double y2;
+		double x3;
+		double y3;
+		double x4;
+		double y4;
+		Scanner reader = new Scanner(System.in);
+
+		System.out.println("Enter x1");
+		x1 = reader.nextDouble();
+		System.out.println("Enter y1");
+		y1 = reader.nextDouble();
+		System.out.println("Enter x2");
+		x2 = reader.nextDouble();
+		System.out.println("Enter y2");
+		y2 = reader.nextDouble();
+		System.out.println("Enter x3");
+		x3 = reader.nextDouble();
+		System.out.println("Enter y3");
+		y3 = reader.nextDouble();
+		System.out.println("Enter x4");
+		x4 = reader.nextDouble();
+		System.out.println("Enter y4");
+		y4 = reader.nextDouble();
+		
+		double length1 = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+			String str1 = Double.toString(length1);	
+	    double length2 = Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
+			String str2 = Double.toString(length2);	
+	        System.out.println(str1.equals(str2));
 	}
 
 }
